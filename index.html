@@ -23,6 +23,35 @@
     </div>
     <div class="Rodape">
     </div>
+    
+    <div class="tab">
+        <button onclick="abrirtab(event, 'sobre')">Sobre</button>
+        <button onclick="abrirtab(event, 'carreira')">Carreira</button>
+        <button onclick="abrirtab(event, 'obejetivos')">Obejetivos</button>
+    </div>
+    <div id="sobre" class="conteudo">
+        <h3>Sobre Mim</h3>
+        <p>Sou o João</p>
+    </div>
+    <div id="carreira" class="conteudo">
+        <h3>Carreira</h3>
+        <p>Trabalho Na Maquil</p>
+    </div>
+    <div id="obejetivos" class="conteudo">
+        <h3>Obejtivos</h3>
+        <p>Quero Ser Programador FrontEnd</p>
+    </div>
 </body>
+
+<script>
+    function abrirtab(evento, idTab) {
+        var conteudos = document.getElementsByClassName('conteudo');
+        for (var i = 0; i < conteudos.length; i++) {
+            conteudos[i].style.display = 'none';
+        }
+        document.getElementById(idTab).style.display = 'block';
+        event.currentTarget.ClassName = 'ativo';
+    }
+</script>
 
 </html>
